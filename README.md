@@ -1,3 +1,78 @@
+# Portfolio
+
+Welcome to my portfolio! This project showcases my skills, projects, and experiences in the field of web development.
+
+## Table of Contents
+
+- [Demo](#demo)
+- [Technologies](#technologies)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Animations](#animations)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Demo
+
+You can check out the live demo of my portfolio [here](<https://bejewelled-kelpie-3736e2.netlify.app/>).
+
+## Technologies
+
+- React
+- HTML
+- CSS
+- <Other technologies used in your project>
+
+## Features
+
+### 1. Hero Section
+
+Introduce yourself and provide a brief overview of your skills and passion for web development.
+
+### 2. Project Section
+
+Highlight some of your key projects with brief descriptions, images, and links to the live demos or GitHub repositories.
+
+### 3. Skills Section
+
+List your technical skills and expertise in web development technologies.
+
+### 4. Certificate Section
+
+Display any relevant certificates or achievements related to web development.
+
+## Installation
+
+To run this project locally, follow these steps:
+
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd portfolio`
+3. Install dependencies: `npm install`
+4. Run the development server: `npm start`
+
+## Usage
+
+Describe how users can navigate and interact with your portfolio.
+
+## Animations
+
+I have implemented animations in this portfolio using the following libraries:
+
+- [React Scroll](https://www.npmjs.com/package/react-scroll)
+  - Used for smooth scrolling to different sections.
+
+Feel free to explore the code to understand how these animations are implemented.
+
+## Contributing
+
+If you have suggestions or find any issues, feel free to open an [issue](<link to your GitHub issues>) or submit a [pull request](<link to your GitHub pull requests>).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
