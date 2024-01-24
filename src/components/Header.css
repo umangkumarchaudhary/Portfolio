@@ -1,0 +1,104 @@
+.main-header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(34, 2, 59); /* Adjust the background color as needed */
+    box-shadow: 0 2px 4px white;
+
+  }
+  .nav-menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    box-shadow: 0 4px 8px white;
+    padding: 10px;
+    max-width: 600px;
+    margin: auto; /* Center the container */
+    border-radius: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .nav-menu li {
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu li:hover {
+    color: #007bff; /* Change the color on hover as needed */
+  }
+  
+  .hire-me-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 8px white; /* Box shadow for hire-me-section */
+    padding: 20px;
+    max-width: 200px;
+    margin: auto; 
+    border-radius: 50px; /* Optional: Add border radius for a rounded appearance */
+  }
+  
+  .hire-me-btn {
+    
+    background-color: #28a745; /* Adjust the background color as needed */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px white;
+    border-radius: 10px;
+
+  }
+  
+  .hire-me-btn.moving {
+    transform: translateY(-5px);
+  }
+  
+ 
+  
+  .theme-switcher {
+    display: flex;
+    align-items: center;
+  }
+  
+  .theme-switcher label {
+    margin-right: 10px;
+  }
+  
+ /* Your existing styles */
+
+/* Hamburger icon is hidden by default */
+.nav-toggle-btn {
+    display: none;
+    cursor: pointer;
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-right: 10px;
+  }
+  
+  /* Media query for screens less than 650px */
+  @media (max-width: 650px) {
+    .nav-menu {
+      display: none; /* Hide the nav menu by default */
+      flex-direction: column; /* Switch back to column for smaller screens */
+    }
+  
+    .nav-menu.open {
+      display: flex; /* Show the nav menu when it has the 'open' class */
+    }
+  
+    /* Show the hamburger icon only for smaller screens */
+    .nav-toggle-btn {
+      display: block;
+    }
+  }
+  

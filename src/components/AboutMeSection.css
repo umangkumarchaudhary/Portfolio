@@ -1,0 +1,214 @@
+/* AboutMeSection.css */
+
+/* Import the font awesome icons */
+@import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
+
+/* Set the font family for the section */
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Set the full container for the section */
+.full-container {
+  display: flex; /* Use flex display */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background: linear-gradient(to right, #f127e6, #f5af19); /* Add a gradient background color */
+  padding: 4rem 0; /* Add some padding around the full container */
+  opacity: 0; /* Set the initial opacity to 0 */
+  animation: fadeIn 1s ease-in-out forwards; /* Add a fade-in animation */
+}
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Set the container for the section */
+.container {
+  display: flex; /* Use flex display */
+  margin: 2rem 0;
+  background-color: black; /* Added a background color to the container */
+  border-radius: 8px; /* Added a border radius to the container */
+  box-shadow: 0 4px 8px blue(0, 0, 0, 0.1); /* Added a box shadow to the container */
+}
+
+/* Set the image container for the section */
+.image-container {
+  flex: 1; /* Set the flex grow factor to 1 */
+  transform: translateX(-100%); /* Set the initial transform to move the image to the left */
+  animation: slideIn 1s ease-in-out forwards; /* Add a slide-in animation */
+}
+
+/* Define the slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Set the image for the section */
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 0 0 8px; /* Added a border radius to the image */
+}
+
+/* Set the content for the section */
+.content {
+  flex: 2; /* Set the flex grow factor to 2 */
+  padding: 2rem;
+}
+
+/* Set the section heading for the section */
+.section-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  transform: translateY(-100%); /* Set the initial transform to move the heading up */
+  animation: bounceIn 1s ease-in-out forwards; /* Add a bounce-in animation */
+}
+
+/* Define the bounce-in animation */
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Set the personal story for the section */
+.personal-story {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Set the intro section for the section */
+.intro-section {
+  margin-bottom: 2rem;
+}
+
+/* Set the intro for the section */
+.intro {
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+
+  strong {
+    color: #1e90ff; /* Highlight color for strong text */
+  }
+}
+
+/* Set the list for the section */
+.list {
+    color: white;
+  display: flex; /* Use flex display */
+  flex-wrap: wrap; /* Allow the list items to wrap */
+  gap: 1rem; /* Add some gap between the list items */
+}
+
+/* Set the list item for the section */
+.list-item {
+  display: flex; /* Use flex display */
+  align-items: center; /* Align the icon and the text vertically */
+  transform: rotateY(-180deg); /* Set the initial transform to flip the list item */
+  animation: flipIn 1s ease-in-out forwards; /* Add a flip-in animation */
+}
+
+/* Define the flip-in animation */
+@keyframes flipIn {
+  from {
+    transform: rotateY(-180deg);
+  }
+  to {
+    transform: rotateY(0);
+  }
+}
+
+
+/* Set the icon for the section */
+/* Add the following code to your AboutMeSection.css file */
+
+/* Set the icon for the section */
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem; /* Add some margin to the right of the icon */
+    transition: transform 0.3s ease-in-out; /* Add a transition for the transform property */
+  }
+  
+  /* Add a hover effect for the icon */
+  .icon:hover {
+    transform: rotate(360deg) scale(1.2); /* Rotate and scale the icon when hovered */
+  }
+  
+  /* Set the button for the section */
+  .button {
+    display: inline-block; /* Display the button as an inline block */
+    padding: 0.5rem 1rem; /* Add some padding around the button */
+    background-color: #007bff; /* Set the background color of the button */
+    color: white; /* Set the text color of the button */
+    border: none; /* Remove the border of the button */
+    border-radius: 5px; /* Add some border radius to the button */
+    text-decoration: none; /* Remove the text decoration of the button */
+    cursor: pointer; /* Set the cursor of the button to pointer */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Add a transition for the transform and background-color properties */
+  }
+  
+  /* Add a hover effect for the button */
+  .button:hover {
+    transform: scale(1.1); /* Scale the button when hovered */
+    background-color: #0056b3; /* Change the background color of the button when hovered */
+  }
+  
+
+/* Add media queries for responsiveness - when the screen is 768px wide or less, change the font size and the flex direction */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Change the flex direction to column */
+  }
+
+  .image-container {
+    flex: none; /* Reset the flex grow factor to none */
+  }
+
+  .image {
+    border-radius: 8px 8px 0 0; /* Change the border radius of the image */
+  }
+
+  .content {
+    flex: none; /* Reset the flex grow factor to none */
+  }
+
+  .section-heading {
+    font-size: 1.5rem; /* Reduce the font size of the section heading */
+  }
+
+  .personal-story {
+    font-size: 1rem; /* Reduce the font size of the personal story */
+  }
+
+  .intro {
+    font-size: 1rem; /* Reduce the font size of the intro */
+  }
+}
