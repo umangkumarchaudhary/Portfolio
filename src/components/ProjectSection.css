@@ -1,44 +1,25 @@
-/* ProjectSection.css */
+
 
 .project-section {
-    /* Set the background color of the section to a gradient */
-    background: linear-gradient(to right, #f127e6, #f5af19);
+    background: linear-gradient(to right, rgb(13, 7, 7), rgb(17, 2, 2));
   
     /* Add some padding around the section */
-    padding: 4rem 0;
+    padding: 1rem 0;
   }
   
   .project-section-title {
-    /* Align the title to the center */
     text-align: center;
-  
-    /* Set the font size of the title to 2.5rem */
     font-size: 2.5rem;
-  
-    /* Set the font weight of the title to bold */
     font-weight: bold;
-  
-    /* Set the text color of the title to white */
     color: white;
-  
-    /* Add some margin below the title */
     margin-bottom: 2rem;
   }
   
   .project-section-grid {
-    /* Use the grid display to create a responsive layout */
     display: grid;
-  
-    /* Set the grid columns to fit the available space with a minimum of 300px */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  
-    /* Add some gap between the grid items */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
-  
-    /* Set the maximum width of the grid to 1200px */
     max-width: 1200px;
-  
-    /* Center the grid horizontally */
     margin: 0 auto;
   }
   
@@ -97,7 +78,7 @@
     font-weight: bold;
   
     /* Set the text color of the title to black */
-    color: black;
+    color: white;
   
     /* Add some margin around the title */
     margin: 1rem;
@@ -123,10 +104,12 @@
   
     /* Set the font size of the link to 1rem */
     font-size: 1rem;
+
+    margin-left: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   
     /* Add some margin around the link */
-    margin: 1rem;
-  
     /* Add some padding around the link */
     padding: 0.5rem 1rem;
   

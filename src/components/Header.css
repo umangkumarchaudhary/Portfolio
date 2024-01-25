@@ -1,10 +1,10 @@
 .main-header {
+   padding: 5px;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    
     background-color: rgb(34, 2, 59); /* Adjust the background color as needed */
     box-shadow: 0 2px 4px white;
-
   }
   .nav-menu-container {
     display: flex;

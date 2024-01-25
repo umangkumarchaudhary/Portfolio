@@ -6,6 +6,7 @@ import AboutMeSection from './components/AboutMeSection';
 import SkillsSection from './components/SkillsSection';
 import ProjectSection from './components/ProjectSection';
 import CertificateSection from './components/CertificateSection';
+import EducationSection from './components/EducationSection';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
     </Link>
       <ProjectSection/>
       <CertificateSection/>
+      <EducationSection/>
     </div>
   );
 }

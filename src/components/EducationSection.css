@@ -1,0 +1,60 @@
+/* EducationSection.css */
+.education-section {
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .section-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .education-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .education-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .degree {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .university {
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .details {
+    margin-top: 10px;
+  }
+  
+  .year,
+  .start-year,
+  .end-year,
+  .cgpa {
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .coursework {
+    color: #555;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  

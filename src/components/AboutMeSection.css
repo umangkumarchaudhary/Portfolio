@@ -14,7 +14,6 @@
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   background: linear-gradient(to right, #f127e6, #f5af19); /* Add a gradient background color */
-  padding: 4rem 0; /* Add some padding around the full container */
   opacity: 0; /* Set the initial opacity to 0 */
   animation: fadeIn 1s ease-in-out forwards; /* Add a fade-in animation */
 }
@@ -32,7 +31,7 @@
 /* Set the container for the section */
 .container {
   display: flex; /* Use flex display */
-  margin: 2rem 0;
+
   background-color: black; /* Added a background color to the container */
   border-radius: 8px; /* Added a border radius to the container */
   box-shadow: 0 4px 8px blue(0, 0, 0, 0.1); /* Added a box shadow to the container */

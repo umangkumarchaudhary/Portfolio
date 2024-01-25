@@ -38,7 +38,6 @@ const AboutMeSection = () => {
 
 
   return (
-    <>
   <div className="full-container" ref={fullContainerRef} id="about-me-section">
       <div className="container">
         <div className="image-container">
@@ -88,7 +87,7 @@ const AboutMeSection = () => {
         </div>
       </div>
     </div>
-    </>
+    
   );
 };
 
