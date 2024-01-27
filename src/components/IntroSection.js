@@ -6,7 +6,7 @@ const IntroSection = () => {
   const professionContainerRef = useRef(null);
 
   useEffect(() => {
-    // Add animation class after component mounts
+    
     professionContainerRef.current.classList.add('animate');
   }, []);
 

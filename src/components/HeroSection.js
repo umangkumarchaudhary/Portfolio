@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import myPicture from "../../src/components/assest/img.jpeg";
 import { motion } from "framer-motion"; // Import the motion component
 
 const HeroSection = () => {
   const [roleIndex, setRoleIndex] = useState(0);
+  const [currentRole, setCurrentRole] = useState("");
+  const [currentName, setCurrentName] = useState("");
   const roles = ["Competitive Programmer", "Open Source Contributor", "Developer"];
+  const name = "Umang Kumar";
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -14,6 +17,44 @@ const HeroSection = () => {
 
     return () => clearInterval(intervalId);
   }, [roles.length]);
+
+  useEffect(() => {
+    let timeoutId;
+    let charIndex = 0;
+
+    const updateRole = () => {
+      if (charIndex < roles[roleIndex].length) {
+        setCurrentRole((prevRole) => prevRole + roles[roleIndex][charIndex]);
+        charIndex++;
+        timeoutId = setTimeout(updateRole, 100); // Adjust the delay as needed
+      }
+    };
+
+    updateRole();
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [roleIndex]);
+
+  useEffect(() => {
+    let timeoutId;
+    let charIndex = 0;
+
+    const updateName = () => {
+      if (charIndex < name.length) {
+        setCurrentName((prevName) => prevName + name[charIndex]);
+        charIndex++;
+        timeoutId = setTimeout(updateName, 100); // Adjust the delay as needed
+      }
+    };
+
+    updateName();
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [name]);
 
   // Define some variants for the image animation
   const imageVariants = {
@@ -42,7 +83,6 @@ const HeroSection = () => {
   return (
     <Container>
       <Overlay>
-        {/* Wrap the image with the motion component and pass the variants */}
         <motion.div
           initial="hidden"
           animate="visible"
@@ -51,17 +91,15 @@ const HeroSection = () => {
           <Image src={myPicture} alt="Your photo" />
         </motion.div>
         <Content>
-          {/* Wrap the title with the motion component and pass the variants */}
           <motion.div
             initial="hidden"
             animate="visible"
             variants={titleVariants}
           >
             <Title>
-              Hi, I'm <span>Umang Kumar</span>
+              Hi, I'm <span>{name}</span>
             </Title>
           </motion.div>
-          {/* Wrap the subtitle with the motion component and pass the variants */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -207,14 +245,28 @@ const Overlay = styled.div`
 
 `;
 
+
+const animatedBackground = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+`;
+
 const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: skyblue;
-
-  padding: 2rem; /* Added padding to the container */
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: ${animatedBackground} 15s ease infinite;
+  padding: 2rem;
 
   @media (max-width: 900px) {
     /* Styles for devices with width less than 900px */
@@ -222,6 +274,8 @@ const Container = styled.div`
     height: auto; /* Removed the fixed height */
   }
 `;
+
+
 
 const Image = styled.img`
   width: 40%;
