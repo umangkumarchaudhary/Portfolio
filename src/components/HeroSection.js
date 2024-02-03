@@ -1,13 +1,18 @@
-import React, { useState, useEffect } from "react";
-import styled, {keyframes} from "styled-components";
+import React, { useState, useEffect, useMemo } from "react";
+import styled, { keyframes } from "styled-components";
 import myPicture from "../../src/components/assest/img.jpeg";
-import { motion } from "framer-motion"; // Import the motion component
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const [currentRole, setCurrentRole] = useState("");
   const [currentName, setCurrentName] = useState("");
-  const roles = ["Competitive Programmer", "Open Source Contributor", "Developer"];
+
+  const roles = useMemo(
+    () => ["Competitive Programmer", "Open Source Contributor", "Developer"],
+    []
+  );
+
   const name = "Umang Kumar";
 
   useEffect(() => {
@@ -23,10 +28,13 @@ const HeroSection = () => {
     let charIndex = 0;
 
     const updateRole = () => {
+      setCurrentRole(""); // Reset currentRole when starting to update it
       if (charIndex < roles[roleIndex].length) {
         setCurrentRole((prevRole) => prevRole + roles[roleIndex][charIndex]);
         charIndex++;
-        timeoutId = setTimeout(updateRole, 100); // Adjust the delay as needed
+        timeoutId = setTimeout(updateRole, 100);
+      } else {
+        charIndex = 0; // Reset charIndex when role updates
       }
     };
 
@@ -35,17 +43,20 @@ const HeroSection = () => {
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [roleIndex]);
+  }, [roleIndex, roles]);
 
   useEffect(() => {
     let timeoutId;
     let charIndex = 0;
 
     const updateName = () => {
+      setCurrentName(""); // Reset currentName when starting to update it
       if (charIndex < name.length) {
         setCurrentName((prevName) => prevName + name[charIndex]);
         charIndex++;
-        timeoutId = setTimeout(updateName, 100); // Adjust the delay as needed
+        timeoutId = setTimeout(updateName, 100);
+      } else {
+        charIndex = 0; // Reset charIndex when name updates
       }
     };
 
@@ -55,6 +66,9 @@ const HeroSection = () => {
       clearTimeout(timeoutId);
     };
   }, [name]);
+
+
+
 
   // Define some variants for the image animation
   const imageVariants = {
@@ -108,23 +122,33 @@ const HeroSection = () => {
             <Subtitle>
               B.Tech student and passionate web developer looking for exciting
               opportunities
+
             </Subtitle>
           </motion.div>
 
-          {/* Wrap the roles box with the motion component and pass the variants */}
           <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={rolesBoxVariants}
-          >
-            <RolesBox>
-              <RolesAnimation>{roles[roleIndex]}</RolesAnimation>
-            </RolesBox>
-          </motion.div>
+          initial="hidden"
+          style={{ visibility: 'hidden', fontSize: '1px' }}
+        >
+          <p>{currentName}</p>
+          <p>{currentRole}</p>
+        </motion.div>
+        
 
-          <Button href="https://github.com/umangkumarchaudhary?tab=repositories">See my work</Button>
+          <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={rolesBoxVariants}
+        >
+          <RolesBox>
+            <RolesAnimation>{roles[roleIndex]}</RolesAnimation>
+          </RolesBox>
+        </motion.div>
 
-          
+
+        <Button href="https://github.com/umangkumarchaudhary?tab=repositories">See my work</Button>
+
+         
           <SocialButton
             href="https://www.linkedin.com/in/umang-kumar-0546b71b5/"
             target="_blank"
