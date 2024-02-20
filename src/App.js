@@ -5,7 +5,6 @@ import HeroSection from './components/HeroSection';
 import AboutMeSection from './components/AboutMeSection';
 import SkillsSection from './components/SkillsSection';
 import ProjectSection from './components/ProjectSection';
-import CertificateSection from './components/CertificateSection';
 import EducationSection from './components/EducationSection';
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
       <Link to="projects" smooth duration={500} offset={-50}>
     </Link>
       <ProjectSection/>
-      <CertificateSection/>
+      
       <EducationSection/>
     </div>
   );
